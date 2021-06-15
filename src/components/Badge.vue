@@ -93,5 +93,4 @@ export default {
 		background-color: $light-gray;
 	}
 }
-
 </style>
