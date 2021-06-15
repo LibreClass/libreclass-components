@@ -8,8 +8,6 @@ import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
 
-const concat = require('concat');
-
 const argv = minimist(process.argv.slice(2));
 
 const projectRoot = path.resolve(__dirname, '..');
