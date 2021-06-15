@@ -53,41 +53,45 @@ export default {
 	},
 };
 </script>
-<style>
+<style lang="scss" scoped>
+@import '../assets/sass/app.scss';
 
-.badge__container {
-	border-radius: 50px !important;
-	width: fit-content;
-	padding: 4px 12px;
-}
 
-.badge__content {
-	font-weight: 600 !important;
-}
+.badge {
+	&__container {
+		border-radius: 50px !important;
+		width: fit-content;
+		padding: 4px 12px;
+	}
 
-.badge--blue {
-	color: #FFF;
-	background-color: #52A3FC;
-}
+	&__content {
+		font-weight: 600 !important;
+	}
 
-.badge--green {
-	color: #FFF;
-	background-color: #44C9A5;
-}
+	&--green {
+		color: $white;
+		background-color: $green;
+	}
 
-.badge--orange {
-	color: #FFF;
-	background-color: #F3935C;
-}
+	&--blue {
+		color: $white;
+		background-color: $blue;
+	}
 
-.badge--purple {
-	color: #FFF;
-	background-color: #996DE1;
-}
+	&--purple {
+		color: $white;
+		background-color: $purple;
+	}
 
-.badge--gray {
-	color: #44505C;
-	background-color: #F0F3FA;
+	&--orange {
+		color: $white;
+		background-color: $orange;
+	}
+
+	&--gray {
+		color: $dark-gray;
+		background-color: $light-gray;
+	}
 }
 
 </style>
