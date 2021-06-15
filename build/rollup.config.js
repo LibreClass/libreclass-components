@@ -8,6 +8,17 @@ import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
 
+const concat = require('concat');
+
+/* Cada arquivo de token que precisar ser exportado,
+deve ser incluído no array abaixo. */
+concat(
+	[
+		'src/assets/sass/variables/colors.scss',
+	],
+	'dist/@libreclass/tokens.scss',
+);
+
 const argv = minimist(process.argv.slice(2));
 
 const projectRoot = path.resolve(__dirname, '..');
