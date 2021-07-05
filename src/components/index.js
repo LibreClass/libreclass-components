@@ -1,2 +1,6 @@
 /* eslint-disable import/prefer-default-export */
+export { default as Avatar } from './Avatar.vue';
 export { default as Badge } from './Badge.vue';
+export { default as SideBar } from './SideBar.vue';
+export { default as NotificationBell } from './NotificationBell.vue';
+export { default as UpperBar } from './UpperBar.vue';

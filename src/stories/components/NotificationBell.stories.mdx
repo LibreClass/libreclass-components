@@ -1,0 +1,51 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import NotificationBell from '../../components/NotificationBell.vue';
+
+<Meta
+	title="Componentes/NotificationBell"
+	component={ NotificationBell }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'blue',
+					'green',
+					'purple',
+					'orange',
+                    'gray'
+				],
+			}
+		},
+	}
+}
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { NotificationBell },
+	template: /*html*/ `
+		<notification-bell
+			v-bind="$props" 
+		>
+            notification-bell
+        </notification-bell>`,
+});
+
+# NotificationBell
+---
+
+## Preview
+
+<Canvas>
+	<Story
+		name="NotificationBell"
+		args={{
+			isActive: 'true',
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="NotificationBell" />

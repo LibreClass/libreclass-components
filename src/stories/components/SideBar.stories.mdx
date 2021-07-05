@@ -1,0 +1,78 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import SideBar from '../../components/SideBar.vue';
+
+<Meta
+	title="Componentes/SideBar"
+	component={ SideBar }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'blue',
+					'green',
+					'purple',
+					'orange',
+                    'gray'
+				],
+			}
+		},
+	}
+}
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { SideBar },
+	template: /*html*/ `
+		<side-bar
+			v-bind="$props" 
+		>
+			<template
+				slot="logo"
+			>
+				<img src="static/media/src/assets/images/libreclass-logo.png">
+			</template>
+        </side-bar>`,
+});
+
+# SideBar
+---
+
+## Preview
+
+export const menuOptions = [
+	{
+		"icon": "pie-chart-outline",
+		"text": "Dashboard",
+		"isActive": true,
+	},
+	{
+		"icon": "folder-open-outline",
+		"text": "Diários",
+		"isActive": false,
+	},
+	{
+		"icon": "person-outline",
+		"text": "Perfil",
+		"isActive": false,
+	},
+	{
+		"icon": "log-out-outline",
+		"text": "Sair",
+		"isActive": false,
+	}
+];
+
+<Canvas>
+	<Story
+		name="SideBar"
+		args={{
+			menuOptions: menuOptions,
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="SideBar" />

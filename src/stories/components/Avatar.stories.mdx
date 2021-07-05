@@ -1,0 +1,54 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import Avatar from '../../components/Avatar.vue';
+
+<Meta
+	title="Componentes/Avatar"
+	component={ Avatar }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'blue',
+					'green',
+					'purple',
+					'orange',
+                    'gray'
+				],
+			}
+		},
+	}
+}
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { Avatar },
+	template: /*html*/ `
+		<avatar
+			v-bind="$props" 
+		>
+            Avatar
+        </avatar>`,
+});
+
+# Avatar
+---
+
+## Preview
+
+<Canvas>
+	<Story
+		name="Avatar"
+		args={{
+			variant: 'blue',
+			name: 'Maria Clara',
+			subContent: 'Diretora',
+			img: 'static/media/src/assets/images/avatarM.jpeg',
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="Avatar" />

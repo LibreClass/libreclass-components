@@ -1,0 +1,51 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import UpperBar from '../../components/UpperBar.vue';
+
+<Meta
+	title="Componentes/UpperBar"
+	component={ UpperBar }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'blue',
+					'green',
+					'purple',
+					'orange',
+                    'gray'
+				],
+			}
+		},
+	}
+}
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { UpperBar },
+	template: /*html*/ `
+		<upper-bar
+			v-bind="$props" 
+		>
+            notification-bell
+        </upper-bar>`,
+});
+
+# UpperBar
+---
+
+## Preview
+
+<Canvas>
+	<Story
+		name="UpperBar"
+		args={{
+			isActive: 'true',
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="UpperBar" />
