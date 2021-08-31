@@ -1,0 +1,33 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import Card from '../../components/Card.vue';
+
+<Meta
+	title="Componentes/Card"
+	component={ Card }
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { Card },
+	template: /*html*/ `
+		<card
+			v-bind="$props" 
+		>
+			Card slot
+		</card>`,
+});
+
+# Card
+---
+
+## Preview
+
+<Canvas>
+	<Story
+		name="Card"
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="Card" />

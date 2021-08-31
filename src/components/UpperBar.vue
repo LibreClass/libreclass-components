@@ -24,9 +24,9 @@
 @import '../assets/sass/app.scss';
 
 ion-icon {
-  --ionicon-stroke-width: 32px;
-  font-size: 22px;
-  color: #182532;
+	--ionicon-stroke-width: 32px;
+	font-size: 22px;
+	color: #182532;
 }
 
 .test {
@@ -35,7 +35,7 @@ ion-icon {
 	height: 8px;
 	border-radius: 50%;
 	margin-bottom: -8px;
-    margin-right: 3px;
+	margin-right: 3px;
 	z-index: 99;
 }
 
