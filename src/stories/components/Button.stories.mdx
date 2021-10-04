@@ -1,0 +1,48 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import Button from '../../components/Button.vue';
+
+<Meta
+	title="Componentes/Button"
+	component={ Button }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'primary',
+					'secondary',
+				],
+			}
+		},
+	}
+}
+/>
+
+export const Template = (args, { argTypes }) => ({
+	props: Object.keys(argTypes),
+	components: { Button },
+	template: /*html*/ `
+		<btn
+			v-bind="$props" 
+		>
+			Button text
+		</btn>`,
+});
+
+# Button
+---
+
+## Preview
+
+<Canvas>
+	<Story
+		name="Button"
+		args={{
+			variant: 'primary',
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="Button" />
