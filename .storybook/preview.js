@@ -17,7 +17,8 @@ import {
 	NotificationBell,
 	UpperBar,
 	Card,
-	Button
+	Button,
+	FilterPill,
 } from '../src/components';
 
 Vue.component('badge', Badge);
@@ -27,6 +28,7 @@ Vue.component('notification-bell', NotificationBell);
 Vue.component('upper-bar', UpperBar);
 Vue.component('card', Card);
 Vue.component('btn', Button);
+Vue.component('filter-pill', FilterPill);
 
 addParameters({
 	options: {
