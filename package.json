@@ -30,6 +30,8 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
+    "highlight.js": "^10.6.0",
+    "vue-hljs": "^2.0.0",
     "@babel/core": "^7.14.6",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
@@ -54,6 +56,7 @@
     "rollup-plugin-vue": "5.1.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
     "concat": "^1.0.3"
   },
   "eslintConfig": {

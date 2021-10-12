@@ -17,6 +17,29 @@ export const Template = (args, { argTypes }) => ({
 		</card>`,
 });
 
+export const template = /*html*/ `
+	<lc-card
+		variant="primary"
+	>
+		Card slot
+	</lc-card>`;
+
+export const docsDecorator = () => {
+	return {
+		data() {
+			return {
+				template,
+			};
+		},
+		template: /*html*/ `
+			<source-code-wrapper
+				:exampleSourceCode="template"
+			>
+				<story slot="component-preview"/>
+			</source-code-wrapper>`,
+	};
+};
+
 # Card
 ---
 
@@ -25,6 +48,7 @@ export const Template = (args, { argTypes }) => ({
 <Canvas>
 	<Story
 		name="Card"
+		decorators={[docsDecorator]}
 	>
 		{ Template.bind({}) }
 	</Story>

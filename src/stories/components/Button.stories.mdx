@@ -29,6 +29,29 @@ export const Template = (args, { argTypes }) => ({
 		</btn>`,
 });
 
+export const template = /*html*/ `
+	<lc-btn
+		variant="primary"
+	>
+		Button text
+	</lc-btn>`;
+
+export const docsDecorator = () => {
+	return {
+		data() {
+			return {
+				template,
+			};
+		},
+		template: /*html*/ `
+			<source-code-wrapper
+				:exampleSourceCode="template"
+			>
+				<story slot="component-preview"/>
+			</source-code-wrapper>`,
+	};
+};
+
 # Button
 ---
 
@@ -37,6 +60,7 @@ export const Template = (args, { argTypes }) => ({
 <Canvas>
 	<Story
 		name="Button"
+		decorators={[docsDecorator]}
 		args={{
 			variant: 'primary',
 		}}

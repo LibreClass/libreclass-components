@@ -36,6 +36,33 @@ export const Template = (args, { argTypes }) => ({
 		</side-bar>`,
 });
 
+export const template = /*html*/ `
+	<lc-side-bar
+		menuOptions="menuOptions"
+	>
+		<template
+			slot="logo"
+		>
+			<img src="static/media/src/assets/images/libreclass-logo.png">
+		</template>
+	</lc-side-bar>`;
+
+export const docsDecorator = () => {
+	return {
+		data() {
+			return {
+				template,
+			};
+		},
+		template: /*html*/ `
+			<source-code-wrapper
+				:exampleSourceCode="template"
+			>
+				<story slot="component-preview"/>
+			</source-code-wrapper>`,
+	};
+};
+
 # SideBar
 ---
 
@@ -67,6 +94,7 @@ export const menuOptions = [
 <Canvas>
 	<Story
 		name="SideBar"
+		decorators={[docsDecorator]}
 		args={{
 			menuOptions: menuOptions,
 		}}

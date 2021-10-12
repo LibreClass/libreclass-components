@@ -32,6 +32,32 @@ export const Template = (args, { argTypes }) => ({
 		</avatar>`,
 });
 
+export const template = /*html*/ `
+	<lc-avatar
+		variant="blue"
+		name="Maria Clara"
+		subContent="Diretora"
+		img="static/media/src/assets/images/avatarM.jpeg"
+	>
+		Avatar
+	</lc-avatar>`;
+
+export const docsDecorator = () => {
+	return {
+		data() {
+			return {
+				template,
+			};
+		},
+		template: /*html*/ `
+			<source-code-wrapper
+				:exampleSourceCode="template"
+			>
+				<story slot="component-preview"/>
+			</source-code-wrapper>`,
+	};
+};
+
 # Avatar
 ---
 
@@ -40,6 +66,7 @@ export const Template = (args, { argTypes }) => ({
 <Canvas>
 	<Story
 		name="Avatar"
+		decorators={[docsDecorator]}
 		args={{
 			variant: 'blue',
 			name: 'Maria Clara',

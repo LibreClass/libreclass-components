@@ -32,6 +32,29 @@ export const Template = (args, { argTypes }) => ({
 		</notification-bell>`,
 });
 
+export const template = /*html*/ `
+	<lc-notification-bell
+		:isActive="true"
+	>
+		notification-bell
+	</lc-notification-bell>`;
+
+export const docsDecorator = () => {
+	return {
+		data() {
+			return {
+				template,
+			};
+		},
+		template: /*html*/ `
+			<source-code-wrapper
+				:exampleSourceCode="template"
+			>
+				<story slot="component-preview"/>
+			</source-code-wrapper>`,
+	};
+};
+
 # NotificationBell
 ---
 
@@ -40,6 +63,7 @@ export const Template = (args, { argTypes }) => ({
 <Canvas>
 	<Story
 		name="NotificationBell"
+		decorators={[docsDecorator]}
 		args={{
 			isActive: true,
 		}}
