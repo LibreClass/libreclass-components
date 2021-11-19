@@ -84,5 +84,34 @@ export default {
 		background-color: #E9F2FC;
 		border: 1px solid #E9F2FC;
 	}
+
+	&__text--danger {
+		font-weight: 600 !important;
+		font-size: 16px;
+		color: #D22D41;
+	}
+
+	&__container--danger {
+		border-radius: 10px;
+		padding: 12px 24px;
+		width: fit-content;
+		background-color: #FFFFFF;
+		border: 1px solid #D3DBE4;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.5s;
+	}
+
+	&__container--danger:hover {
+		transition: all 0.5s;
+		background-color: #FAFCFE;
+		border: 1px solid #D3DBE4;
+	}
+
+	&__container--danger:active {
+		background-color: #EFF5FB;
+		border: 1px solid #D3DBE4;
+	}
 }
 </style>
