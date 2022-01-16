@@ -28,11 +28,7 @@ export const Template = (args, { argTypes }) => ({
 		<side-bar
 			v-bind="$props" 
 		>
-			<template
-				slot="logo"
-			>
 				<img src="static/media/src/assets/images/libreclass-logo.png">
-			</template>
 		</side-bar>`,
 });
 
@@ -40,11 +36,7 @@ export const template = /*html*/ `
 	<lc-side-bar
 		menuOptions="menuOptions"
 	>
-		<template
-			slot="logo"
-		>
-			<img src="static/media/src/assets/images/libreclass-logo.png">
-		</template>
+		<img src="static/media/src/assets/images/libreclass-logo.png">
 	</lc-side-bar>`;
 
 export const docsDecorator = () => {
