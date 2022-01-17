@@ -9,7 +9,7 @@
         <div
             class="logo-size"
         >
-            <slot name="logo" />
+            <slot />
         </div>
         <div
             class="teste"
